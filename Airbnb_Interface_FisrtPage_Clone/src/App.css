@@ -1,0 +1,155 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+nav{
+    display: flex;
+    padding: 20px 36px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(255, 255, 255, 0.358);
+}
+
+
+section{
+  padding: 20px;
+}
+
+/* Grid Image Styles css*/
+
+.Photo--Header{
+  margin-bottom:16px;
+}
+
+.Photo--Text{
+  margin-top: 0;
+  padding-left: 18px;
+}
+.Photo--Section{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  padding-top: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+
+}
+.Photo--Grid{
+  width: 90%;
+  height: 90%;
+  max-width: 90vh;
+  max-height: 45vh;
+  
+  
+}
+
+
+/*Card Image Styles css*/
+
+span{
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+}
+
+.Price-Section{
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+.Card-Stats{
+  display:flex;
+  align-items:  center;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.card--image {
+  width: 100%;
+  border-radius: 9px;
+  margin-bottom: 9px;
+}
+
+.card-badge{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: black;
+}
+
+.card {
+  width: 140px;
+  font-size: 12px;
+  flex: 0 0 auto;         
+  display: flex;          
+  flex-direction: column;
+  border-radius: 9px;
+  position: relative;
+}
+
+.Gray{
+  color: rgb(150, 150, 150);
+}
+
+/* Footer info style css*/
+a{
+
+  color:white;
+}
+footer{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin-top:10px;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}
