@@ -1,0 +1,63 @@
+nav{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background: linear-gradient(90deg, #2DB78E 1.18%, #9c26d3 100%);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.Form{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top:70px ;
+}
+
+.btn{
+ border-radius: 5px;
+ border: none;
+ cursor: pointer;
+ margin-top:35px;
+ width: 477px;
+ height: 40px;
+ background: linear-gradient(90deg, #2DB78E 1.18%, #9c26d3 100%);
+ color: white;
+}
+
+.Form--Input{
+  width: 230px;
+  height: 35px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+Footer{
+  color: white;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  flex-direction: column
+}
+a{
+  text-decoration: underline;
+  color: white;
+}
+
+
+/* center the placeholder */
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;  
+}
+
+:-ms-input-placeholder {  
+  text-align: center; 
+}
