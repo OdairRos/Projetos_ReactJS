@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+a{
+  text-decoration: underline;
+  color:#918E9B;
+}
+button {
+  font-size: calc(10px + 2vmin);
+}
+p{
+  font-size: 11.24px;
+  line-height: 12px;
+}
+
+h2{
+  color: #2B283A;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+
+}
+
+.Font-normal{
+  font-weight: normal;
+}
+/*Header*/
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 30px;
+  background-color: #F55A5A;
+  box-shadow: 0px 3.98256px 8.4564px rgba(0, 0, 0, 0.458);
+  margin-bottom:30px;
+}
+
+.ball{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Card section */
+.Card--Local{
+  font-weight: normal;
+  letter-spacing: 0.17em;
+  font-size: 10.24px;
+  line-height: 12px;
+  padding-right: 15px;
+  padding-left: 5px;
+
+}
+
+.Card{
+  display: flex;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.Card-LocalInfo{
+  
+  margin: 0;
+  padding-top: 20px;
+}
+.Card--Description{
+  display: flex;
+  flex-direction: column;
+  margin-left:20px;
+}
+.Card-Photo{
+  border-radius: 9px;
+  
+}
+@media (max-width: 600px) {
+  .Card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Card-Photo{
+    width: 300px;
+    height: 300px;
+  }
+}
