@@ -10,7 +10,7 @@ nav{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top:70px ;
+  margin-top:40px ;
 }
 
 .btn{
@@ -31,6 +31,14 @@ nav{
   box-sizing: border-box;
   border-radius: 5px;
 }
+
+.Meme-Photo{
+  max-width: 90%;
+
+  border-radius: 4px;
+  margin-top: 20px;
+
+}
 Footer{
   color: white;
   display:flex;
@@ -44,7 +52,11 @@ a{
   color: white;
 }
 
-
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* center the placeholder */
 ::-webkit-input-placeholder {
   text-align: center;

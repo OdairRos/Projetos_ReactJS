@@ -1,12 +1,25 @@
 import React from "react";
 import data from "../src/data"
 export function Form(props){
-  const memes = data.data.memes
+  const Allmemes = data.data.memes
+
+  const [meme , setmeme] = React.useState({
+    memeUrl: "",
+    TopText: "",
+    BottomText: ""
+  })
+
   function GetRandomMeme(){
+    setmeme(
+       {
+        TopText: document.getElementById("above").value,
+        bottomText: document.getElementById("below").value,
+        memeUrl: Allmemes[Math.floor(Math.random() * Allmemes.length)].url
+    })
     
-    return item[Math.floor(Math.random() * item.length)]
-    
+
   }
+
   return(
     <div >
       <div className="Form">
@@ -31,6 +44,11 @@ export function Form(props){
           value="Get a meme image    🖼"
           onClick={GetRandomMeme}/>
       </div>
+
+      <div className="center">
+        <img className="Meme-Photo" src={meme.memeUrl} alt="" />
+      </div>
+      
     </div>
     
   )
