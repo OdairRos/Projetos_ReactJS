@@ -6,6 +6,7 @@ nav{
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .Form{
   display: flex;
   justify-content: space-around;
@@ -13,12 +14,31 @@ nav{
   margin-top:40px ;
 }
 
+@media (min-width: 900px) {
+  .Form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #above{
+    margin-bottom: 25px;
+    width: 40%;
+  }
+  #below{
+    width: 40%
+  }
+
+  #BtnMeme{
+    width:30%;
+  }
+}
+
 .btn{
  border-radius: 5px;
  border: none;
  cursor: pointer;
  margin-top:35px;
- width: 477px;
+ width: 70%;
  height: 40px;
  background: linear-gradient(90deg, #2DB78E 1.18%, #9c26d3 100%);
  color: white;
@@ -35,28 +55,74 @@ nav{
 .Meme-Photo{
   max-width: 90%;
 
-  border-radius: 4px;
-  margin-top: 20px;
+  border-radius: 9px;
+  margin-top: 90px;
 
 }
+
 Footer{
   color: white;
   display:flex;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 90px;
   flex-direction: column
 }
+
 a{
   text-decoration: underline;
   color: white;
 }
 
-.center{
+.text{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
+
+.top{
+  position: relative;
+  top: 90px;
+}
+
+.bottom{
+  bottom: 0px;
+}
+
+
+.meme--text {
+
+  position: absolute;
+  width: 60%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.center{
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
 /* center the placeholder */
 ::-webkit-input-placeholder {
   text-align: center;
