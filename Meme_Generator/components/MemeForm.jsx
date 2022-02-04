@@ -1,10 +1,11 @@
 import React from "react";
-import data from "../src/data"
 export function Form(props){
-  const Allmemes = data.data.memes
+
+
+  const [Allmemes, setAllMemes] = React.useState()
 
   const [meme , setmeme] = React.useState({
-    memeUrl: "",
+    memeUrl: "http://i.imgflip.com/1bij.jpg",
     TopText: "",
     BottomText: ""
   })
@@ -12,17 +13,29 @@ export function Form(props){
   const [Texts, setTexts] = React.useState({
     above: "",
     below: "",
-    imageOn:false,
+    imageOn:true,
   })
 
-  function GetRandomMeme(){
-    setmeme(
-       {
-        TopText: document.getElementById("above").value,
-        bottomText: document.getElementById("below").value,
-        memeUrl: Allmemes[Math.floor(Math.random() * Allmemes.length)].url  
-    })
+  React.useEffect(()=>{
 
+    async function getMemes(){
+      const res = await  fetch("https://api.imgflip.com/get_memes")
+      const data = await res.json()
+      setAllMemes(data)
+    }
+    getMemes()
+    
+  }, [])
+
+  
+  function GetRandomMeme(){
+    const memesArray = Allmemes.data.memes
+    const randomNumber = Math.floor(Math.random() * memesArray.length)
+    setmeme(prevMeme => ({
+      ...prevMeme,
+      memeUrl: memesArray[randomNumber].url
+    }))
+       
     setTexts(() =>({...Texts, imageOn: true}))
   }
   function handleChange(event){
@@ -40,7 +53,7 @@ export function Form(props){
             id="above" 
             value={Texts.above} 
             onChange={handleChange}
-            Placeholder="above text" 
+            placeholder="above text" 
             className="Form--Input"/>
         
           <input 
@@ -49,7 +62,7 @@ export function Form(props){
             id="below"
             value={Texts.below} 
             onChange={handleChange} 
-            Placeholder="below text" 
+            placeholder="below text" 
             className="Form--Input"/>
      
         <input 
@@ -61,7 +74,7 @@ export function Form(props){
           onClick={GetRandomMeme}/>
 
       </div>
-
+    
       <div className="center">
         <img className="Meme-Photo" src={meme.memeUrl} alt="" />
         <div className="text">
