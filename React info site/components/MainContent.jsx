@@ -1,6 +1,7 @@
-export function Main() {
+export function Main(props) {
     return(
-      <main className="Main-Content">
+      <main className={props.darkMode ? "Main-Content dark": "Main-Content light"}
+       >
         <h1>Fatos Sobre o ReactJS</h1>
         <ul>
           <li>A primeira versão saiu em 2013</li>
@@ -12,3 +13,6 @@ export function Main() {
       </main>
     )
   }
+
+
+  
