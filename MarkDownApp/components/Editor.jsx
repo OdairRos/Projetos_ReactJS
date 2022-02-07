@@ -1,9 +1,20 @@
 import React from "react"
-import ReactMde from "react-mde"
-import Showdown from "showdown"
+import MDEditor from '@uiw/react-md-editor';
 
-export  function Editor({ currentNote, updateNote }) {
+
+
+
+export default function Editor({ currentNote, updateNote }) {
+  const [value, setValue] = React.useState("**Hello world!!!**");
   return(
-    <h2>idaspd</h2>
+    <div className="container">
+    <MDEditor
+     height={600}
+      value={currentNote.body}
+      onChange={updateNote}
+      
+    />
+  
+  </div>
   )
 }

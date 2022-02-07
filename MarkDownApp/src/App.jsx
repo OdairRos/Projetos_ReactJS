@@ -6,7 +6,7 @@ import {nanoid} from "nanoid"
 
 import "./App.css"
 export default function App() {
-    const [notes, setNotes] = React.useState([])
+    const [notes, setNotes] = React.useState(JSON.parse(localStorage.getItem("notes")) || [])
     const [currentNoteId, setCurrentNoteId] = React.useState(
         (notes[0] && notes[0].id) || ""
     )
@@ -28,6 +28,10 @@ export default function App() {
         }))
     }
     
+React.useEffect(()=>{
+  localStorage.setItem("notes", JSON.stringify(notes))
+}, [notes])
+
     function findCurrentNote() {
         return notes.find(note => {
             return note.id === currentNoteId
@@ -69,7 +73,7 @@ export default function App() {
                     Create one now
                 </button>
             </div>
-            
+          
         }
         </main>
     )
